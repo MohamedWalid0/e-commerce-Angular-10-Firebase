@@ -1,0 +1,20 @@
+<div class="my-5">
+
+  <form class="w-50  m-auto" [formGroup] ='addNewGoodForm' (ngSubmit) = 'addNewGood(addNewGoodForm)'>
+
+    <div class="form-group">
+      <label > Name</label>
+      <input type="text" class="form-control" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label >Price </label>
+      <input type="number" class="form-control" formControlName="price" >
+    </div>
+    <div class="form-group">
+      <input type="file" class="" ngModel formControlName="img" #img>
+    </div>
+
+    <button type="submit"  [disabled]='addNewGoodForm.invalid==true' class="btn btn-primary ">Submit</button>
+  </form>
+
+</div>
